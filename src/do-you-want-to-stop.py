@@ -1,8 +1,8 @@
 # You should write a loop around this question, and keep asking until
 # the answer is "yes" (lower case).
-# ans=''
-# while ans!='yes':
-#     ans=input('Do you want to stop?')
+ans=''
+while ans!='yes':
+    ans=input('Do you want to stop?')
 
 
 # while True:
@@ -10,5 +10,5 @@
 #     if ans=='yes':
 #         break
 
-while input('Do you want to stop?')!='yes':
-    pass
+# while input('Do you want to stop?')!='yes':
+#     pass
