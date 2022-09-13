@@ -3,13 +3,13 @@ import sys
 # This reads all of stdin and converts it into a list of integers.
 # This *only* works if there are no non-integers in the input.
 # You can learn how to deal with errors later...
-# x = [int(a) for a in sys.stdin.read().split()]
+x = [int(a) for a in sys.stdin.read().split()]
 
 # if you have a list of integers you want to write to stdout in the same
 # space separated format, you cannot use print(x) since that will add the
 # square brackets and the commas, but you can use
 #
-# print(" ".join(str(i) for i in x))
+print(" ".join(str(i) for i in x))
 #
 # to first translate the integers into strings, (str(i) for i in x),
 # and then merge them with spaces between them, " ".join(...).
@@ -18,7 +18,7 @@ import sys
 # we need to do, but you can use this function to make the code
 # a little more readable:
 
-x = [1, 2, 3, 4, 5, 6]
+# x = [1, 2, 3, 4, 5, 6]
 
 def print_list(x):
     print(" ".join(str(i) for i in x))
@@ -37,9 +37,9 @@ print_list(x)
 # "even" it is the third. Any other option is an error.
 
 
-# if len(sys.argv) < 2:
-#     print("Incorrect number of arguments.", file=sys.stderr)
-#     sys.exit(1)
+if len(sys.argv) < 2:
+    print("Incorrect number of arguments.", file=sys.stderr)
+    sys.exit(1)
 
 match sys.argv[1]:
     case "mean":
@@ -53,11 +53,11 @@ match sys.argv[1]:
 
     case "times":
         # Put your solution to the second exercise here
-        times_three = []
-        for i in x:
-            xthree=i*3
-            times_three.append(xthree)
-        print_list(times_three)
+        # times_three = []
+        # for i in x:
+        #     xthree=i*3
+        #     times_three.append(xthree)
+        # print_list(times_three)
 
         xthreelist=[i*3 for i in x]
         print_list(xthreelist)
@@ -65,11 +65,11 @@ match sys.argv[1]:
 
     case "even":
         # Put your solution to the third exercise here
-        even = []
-        for i in x:
-            if i%2==0:
-                even.append(i)
-        print_list(even)
+        # even = []
+        # for i in x:
+        #     if i%2==0:
+        #         even.append(i)
+        # print_list(even)
 
         evenlist=[i for i in x if i%2==0]
         print_list(evenlist)

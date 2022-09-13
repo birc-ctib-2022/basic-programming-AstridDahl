@@ -14,9 +14,19 @@ match command:
     case "encode":
         # Implement the encoding here
         encoding = ""
+        hex_list=[hex(ord(c)) for c in x]
+        encoding=''.join(hex_list)
+        
         print(encoding)
 
     case "decode":
         # Implement the decoding here
         decoding = ""
+        hex_list=x.split('0x')
+        hex_list.pop(0)
+        chr_list=[chr(int(string, base=16)) for string in hex_list]
+        decoding=''.join(chr_list)
+
         print(decoding)
+
+
