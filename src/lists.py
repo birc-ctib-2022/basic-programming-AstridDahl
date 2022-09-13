@@ -9,7 +9,7 @@ x = [int(a) for a in sys.stdin.read().split()]
 # space separated format, you cannot use print(x) since that will add the
 # square brackets and the commas, but you can use
 #
-print(" ".join(str(i) for i in x))
+# print(" ".join(str(i) for i in x))
 #
 # to first translate the integers into strings, (str(i) for i in x),
 # and then merge them with spaces between them, " ".join(...).
@@ -23,7 +23,7 @@ print(" ".join(str(i) for i in x))
 def print_list(x):
     print(" ".join(str(i) for i in x))
 
-print_list(x)
+# print_list(x)
 
 # We haven't covered functions yet, it is a few weeks away, but all
 # you have to do to print a list, `y`, is to write `print_list(y)`.
@@ -49,7 +49,7 @@ match sys.argv[1]:
             total+=i
         mean = total/len(x)
         print(mean)
-        
+
 
     case "times":
         # Put your solution to the second exercise here
