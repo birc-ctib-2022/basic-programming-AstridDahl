@@ -18,10 +18,12 @@ x = [int(a) for a in sys.stdin.read().split()]
 # we need to do, but you can use this function to make the code
 # a little more readable:
 
+# x = [1, 2, 3, 4, 5, 6]
 
 def print_list(x):
     print(" ".join(str(i) for i in x))
 
+# print_list(x)
 
 # We haven't covered functions yet, it is a few weeks away, but all
 # you have to do to print a list, `y`, is to write `print_list(y)`.
@@ -42,18 +44,35 @@ if len(sys.argv) < 2:
 match sys.argv[1]:
     case "mean":
         # put your solution to the first exercise here
-        mean = "mean of x"
+        total=0
+        for i in x:
+            total+=i
+        mean = total/len(x)
         print(mean)
+
 
     case "times":
         # Put your solution to the second exercise here
-        times_three = []
-        print_list(times_three)
+        # times_three = []
+        # for i in x:
+        #     xthree=i*3
+        #     times_three.append(xthree)
+        # print_list(times_three)
+
+        xthreelist=[i*3 for i in x]
+        print_list(xthreelist)
+
 
     case "even":
         # Put your solution to the third exercise here
-        even = []
-        print_list(even)
+        # even = []
+        # for i in x:
+        #     if i%2==0:
+        #         even.append(i)
+        # print_list(even)
+
+        evenlist=[i for i in x if i%2==0]
+        print_list(evenlist)
 
     case _:
         print(f"Incorrect command {sys.argv[1]}.", file=sys.stderr)
